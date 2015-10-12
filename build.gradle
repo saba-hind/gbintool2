@@ -3,7 +3,8 @@ plugins {
 }
 
 apply plugin: 'groovy'
-
+apply plugin : 'java'
+apply plugin : 'eclipse'
 apply plugin: 'application'
 mainClassName = 'fr.uvsq.doosa.gradletuto.Main'
 
@@ -13,4 +14,6 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.5'
+	compile (group:'commons-cli',name:'commons-cli,version:'1.2')
+	testcompile group:'junit',name:'junit',version'4.+'
 }
